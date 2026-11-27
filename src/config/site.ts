@@ -14,3 +14,6 @@ export const socials: SocialLink[] = [
   { label: 'X / Twitter', handle: '@hellogon', href: 'https://x.com/hellogon' },
   { label: 'LinkedIn', handle: 'in/hellogon', href: 'https://www.linkedin.com/in/hellogon' },
 ]
+
+/** When true, every visit shows the maintenance page instead of the playground. */
+export const maintenanceMode = true
