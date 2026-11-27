@@ -11,7 +11,7 @@ export const WEATHER_LABEL: Record<Weather, { name: string; emoji: string }> = {
 
 const STORAGE_KEY = 'gon-weather'
 
-/** Weather for Gon's world. Starry night is the dark theme; the class is first set by index.html. */
+/** Weather for Gôn's world. Starry night is the dark theme; the class is first set by index.html. */
 export function useWeather() {
   const [weather, setWeather] = useState<Weather>(() => {
     const saved = (() => {

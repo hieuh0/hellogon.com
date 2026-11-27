@@ -76,7 +76,7 @@ function save(p: PetState) {
 const isNightHour = (h: number) => h >= 23 || h < 5
 
 /**
- * Gon's persistent pet state: Paw Coin wallet, runner high score, unlocked and
+ * Gôn's persistent pet state: Paw Coin wallet, runner high score, unlocked and
  * equipped skins and accessories, and the stats that unlock achievement hats.
  */
 export function usePetStore(onAchievement: (a: Accessory) => void) {

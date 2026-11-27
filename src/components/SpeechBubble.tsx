@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import type { Speech } from '../hooks/useGonBrain'
 
-/** Speech bubble above Gon. Keeps the last line while fading out so it never jumps. */
+/** Speech bubble above Gôn. Keeps the last line while fading out so it never jumps. */
 export function SpeechBubble({ speech }: { speech: Speech | null }) {
   const lastRef = useRef<Speech | null>(null)
   if (speech) lastRef.current = speech

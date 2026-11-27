@@ -7,7 +7,7 @@ const PRESETS = [25, 15, 5]
 interface LofiWidgetProps {
   open: boolean
   onClose: () => void
-  /** Focus is active while the timer runs or the lo-fi beat plays (Gon wears headphones). */
+  /** Focus is active while the timer runs or the lo-fi beat plays (Gôn wears headphones). */
   onFocusChange: (active: boolean) => void
   onStart: () => void
   /** A Pomodoro session ran to zero. */
@@ -124,7 +124,7 @@ export function LofiWidget({ open, onClose, onFocusChange, onStart, onComplete }
         <div className="h-full rounded-full bg-[#7EE081] transition-[width] duration-300" style={{ width: `${progress * 100}%` }} />
       </div>
       <p className="mt-1.5 text-center text-xs font-bold text-[var(--muted)]">
-        {running ? 'Đang tập trung… Gon ở đây cổ vũ nè!' : 'Sẵn sàng tập trung chưa?'}
+        {running ? 'Đang tập trung… Gôn ở đây cổ vũ nè!' : 'Sẵn sàng tập trung chưa?'}
       </p>
 
       <div className="mt-3 flex gap-2">

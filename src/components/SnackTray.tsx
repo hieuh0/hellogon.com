@@ -16,7 +16,7 @@ export const SNACKS: Snack[] = [
   { id: 'chili', emoji: '🌶️', label: 'Ớt cay xè', crumb: '#FF4B3A', bg: '#FFD6C9' },
 ]
 
-/** How close (px) to Gon's mouth a dropped snack must be to get eaten. */
+/** How close (px) to Gôn's mouth a dropped snack must be to get eaten. */
 const EAT_RADIUS = 80
 
 interface SnackTrayProps {
@@ -29,7 +29,7 @@ interface SnackTrayProps {
 }
 
 /**
- * A tray of snacks above the dock. Drag a snack to Gon's mouth (he watches it and
+ * A tray of snacks above the dock. Drag a snack to Gôn's mouth (he watches it and
  * opens wide as it gets closer), or tap one to toss it straight in.
  */
 export function SnackTray({ open, world, reducedMotion, getMouth, onEat, onMiss }: SnackTrayProps) {
@@ -100,7 +100,7 @@ export function SnackTray({ open, world, reducedMotion, getMouth, onEat, onMiss 
     drag.current = null
     const mouth = getMouth()
     if (!d.moved) {
-      // A tap tosses the snack in an arc straight into Gon's mouth.
+      // A tap tosses the snack in an arc straight into Gôn's mouth.
       fly(e.clientX, e.clientY, getMouth, 520, 90, () => eat(d.snack))
     } else if (Math.hypot(e.clientX - mouth.x, e.clientY - mouth.y) < EAT_RADIUS) {
       fly(e.clientX, e.clientY, getMouth, 120, 0, () => eat(d.snack))
@@ -137,7 +137,7 @@ export function SnackTray({ open, world, reducedMotion, getMouth, onEat, onMiss 
       <div
         id="snack-tray"
         role="group"
-        aria-label="Khay đồ ăn: kéo món ăn vào miệng Gon"
+        aria-label="Khay đồ ăn: kéo món ăn vào miệng Gôn"
         inert={!open}
         className={`absolute bottom-full left-1/2 mb-3 -translate-x-1/2 rounded-[28px] border-2 border-b-4 border-[var(--edge)] bg-[var(--panel)] p-2 shadow-[0_14px_30px_-16px_var(--shadow)] transition duration-200 ease-[cubic-bezier(0.3,1.5,0.5,1)] ${
           open ? 'translate-y-0 scale-100 opacity-100' : 'pointer-events-none translate-y-3 scale-90 opacity-0'
@@ -148,7 +148,7 @@ export function SnackTray({ open, world, reducedMotion, getMouth, onEat, onMiss 
             <li key={s.id}>
               <button
                 type="button"
-                aria-label={`Cho Gon ăn ${s.label}`}
+                aria-label={`Cho Gôn ăn ${s.label}`}
                 title={s.label}
                 onPointerDown={onPointerDown(s)}
                 onPointerMove={onPointerMove}

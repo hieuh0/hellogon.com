@@ -1,5 +1,5 @@
 /**
- * Shared, mutable state for Gon's little world. Gon, the ball and the snack tray
+ * Shared, mutable state for Gôn's little world. Gôn, the ball and the snack tray
  * each read and write it from their own animation loops, so nothing here triggers
  * React renders.
  */
@@ -7,7 +7,7 @@
 /** The grassy hill: the top of an ellipse centered horizontally on screen. */
 export interface Hill {
   cx: number
-  /** Viewport y of the crest (the highest point, where Gon stands). */
+  /** Viewport y of the crest (the highest point, where Gôn stands). */
   crestY: number
   /** Horizontal and vertical semi-axes of the hill's top arc. */
   a: number
@@ -17,15 +17,15 @@ export interface Hill {
 export interface World {
   hill: Hill
   ball: { active: boolean; held: boolean; x: number; y: number; vx: number; vy: number; r: number }
-  /** A snack being dragged toward Gon. */
+  /** A snack being dragged toward Gôn. */
   snack: { active: boolean; x: number; y: number }
-  /** Dino Runner: Gon's jump height above the track (px, up is positive), vertical speed and ducking. */
+  /** Dino Runner: Gôn's jump height above the track (px, up is positive), vertical speed and ducking. */
   game: { active: boolean; y: number; vy: number; duck: boolean }
-  /** Where Gon was last drawn: the SVG origin in viewport px and the px size of one SVG unit. */
+  /** Where Gôn was last drawn: the SVG origin in viewport px and the px size of one SVG unit. */
   gon: { x: number; y: number; unit: number }
 }
 
-/** Gon's rendered size in px; smaller while running so the track has room. */
+/** Gôn's rendered size in px; smaller while running so the track has room. */
 export const gonSize = (w: number, h: number, running = false) =>
   running ? Math.min(w * 0.36, 150, h * 0.22) : Math.min(w * 0.55, 250, h * 0.3)
 

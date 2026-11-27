@@ -34,7 +34,7 @@ export function SayHiPopover({ open, onClose, containerRef }: SayHiPopoverProps)
       }`}
     >
       <p className="px-3 pt-2 pb-1 text-sm font-extrabold text-[var(--muted)]">
-        💌 Nhắn cho Gon nha
+        💌 Nhắn cho Gôn nha
       </p>
       <ul>
         {socials.map((s) => (

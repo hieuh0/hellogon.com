@@ -17,7 +17,7 @@ function slice(i: number) {
 
 /**
  * A bouncy beach ball that rolls on the hill. Flick or drag it around;
- * Gon chases it on his own (see GonMascot) through the shared world state.
+ * Gôn chases it on his own (see GonMascot) through the shared world state.
  */
 export function BallToy({ world, spawnX }: { world: World; spawnX: number }) {
   const ballRef = useRef<HTMLDivElement>(null)

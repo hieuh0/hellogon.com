@@ -38,7 +38,7 @@ export function FloatingDock(props: FloatingDockProps) {
       <div ref={dockRef} className="pointer-events-auto relative">
         <SayHiPopover open={panel === 'hi'} onClose={props.onClosePanel} containerRef={dockRef} />
         {props.children}
-        <nav aria-label="Đồ chơi của Gon" className="flex flex-wrap items-center justify-center gap-1 sm:gap-2">
+        <nav aria-label="Đồ chơi của Gôn" className="flex flex-wrap items-center justify-center gap-1 sm:gap-2">
           <CandyButton label="Chơi game" emoji="🎮" bg="#B8F2B6" onClick={props.onPlay} />
           <CandyButton
             label="Đồ ăn"

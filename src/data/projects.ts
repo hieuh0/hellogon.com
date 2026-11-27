@@ -37,7 +37,7 @@ export const projects: Project[] = [
   {
     title: 'Tiny Weather',
     tag: 'API · Ứng dụng mini',
-    description: 'Dự báo thời tiết kể bằng biểu cảm của Gon.',
+    description: 'Dự báo thời tiết kể bằng biểu cảm của Gôn.',
     status: 'wip',
     href: '#',
   },

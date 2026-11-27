@@ -7,15 +7,15 @@ import { BreathPuffs, FaceAccessory, HeadAccessory, Headphones, Scarf, Umbrella 
 
 export interface GonHandle {
   hop: (strength?: number) => void
-  /** Gon's current center in viewport pixels. */
+  /** Gôn's current center in viewport pixels. */
   getCenter: () => { x: number; y: number }
-  /** Gon's mouth in viewport pixels (where snacks should land). */
+  /** Gôn's mouth in viewport pixels (where snacks should land). */
   mouthPoint: () => { x: number; y: number }
   /** Chew for a moment and scatter crumbs of the given color. */
   chomp: (crumbColor: string) => void
 }
 
-/** Things Gon puts on by himself for the weather or for focus mode. */
+/** Things Gôn puts on by himself for the weather or for focus mode. */
 export interface Gear {
   umbrella: boolean
   scarf: boolean
@@ -479,11 +479,11 @@ export const GonMascot = forwardRef<GonHandle, GonMascotProps>(function GonMasco
         if (Math.abs(s.y) < 0.05 && Math.abs(s.vy) < 0.05) s.y = s.vy = 0
       }
 
-      // Feet follow the curve of the hill as Gon moves sideways.
+      // Feet follow the curve of the hill as Gôn moves sideways.
       const groundTarget = p.zeroG || s.drag?.moved || running ? 0 : groundY(world.hill, cx + s.x) - world.hill.crestY
       s.ground += (groundTarget - s.ground) * ease
 
-      // Charge: holding the pointer still puffs Gon up until he sneezes sparks.
+      // Charge: holding the pointer still puffs Gôn up until he sneezes sparks.
       const held = s.drag && !s.drag.moved && !s.drag.pat && !s.popAt ? now - s.drag.startT - CHARGE_DELAY : -1
       if (held > 0) s.charge = Math.min(1, held / CHARGE_MS)
       else s.charge += (0 - s.charge) * (1 - Math.pow(1 - 0.2, f))
@@ -813,7 +813,7 @@ export const GonMascot = forwardRef<GonHandle, GonMascotProps>(function GonMasco
         if (onHeadTop(l.x, l.y)) feedPat(s, l.x, now)
       }
 
-      // Circling the pointer quickly around Gon (two full turns in 1.6s) makes him dizzy.
+      // Circling the pointer quickly around Gôn (two full turns in 1.6s) makes him dizzy.
       const dx = e.clientX - s.center.x
       const dy = e.clientY - s.center.y
       const dist = Math.hypot(dx, dy)
@@ -986,7 +986,7 @@ export const GonMascot = forwardRef<GonHandle, GonMascotProps>(function GonMasco
         ref={moverRef}
         role="button"
         tabIndex={0}
-        aria-label="Gon, bé khủng long con. Bấm để chọc, xoa đầu để cưng, giữ để hắt xì, kéo để ném."
+        aria-label="Gôn, bé khủng long con. Bấm để chọc, xoa đầu để cưng, giữ để hắt xì, kéo để ném."
         className={`${runner === 'off' ? '' : 'pointer-events-none'} absolute inset-0 cursor-grab touch-none rounded-full outline-none will-change-transform select-none focus-visible:ring-4 focus-visible:ring-[#4A3728]/25 active:cursor-grabbing`}
       >
         <svg ref={svgRef} viewBox="-100 -100 200 200" className="h-full w-full overflow-visible" aria-hidden>
@@ -1177,7 +1177,7 @@ export const GonMascot = forwardRef<GonHandle, GonMascotProps>(function GonMasco
   )
 })
 
-/** Gon's mouth in viewport pixels, from the last drawn frame. */
+/** Gôn's mouth in viewport pixels, from the last drawn frame. */
 function mouthPoint(s: Sim) {
   return {
     x: s.origin.x + FACE_X * s.unit * (Math.sign(s.face) || 1),

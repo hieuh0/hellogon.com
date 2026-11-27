@@ -1,6 +1,6 @@
-/** Gon's dialogue. Short, casual, cute Vietnamese. */
+/** Gôn's dialogue. Short, casual, cute Vietnamese. */
 export const lines = {
-  hello: ['Ủa, chào cậu nha!', 'Hế lô! Tui là Gon nè.', 'Chọc tui hả? Hihi.', 'Ơ, có khách tới chơi!'],
+  hello: ['Ủa, chào cậu nha!', 'Hế lô! Tui là Gôn nè.', 'Chọc tui hả? Hihi.', 'Ơ, có khách tới chơi!'],
   tickle: ['Ê, nhột quá à!', 'Thôi đừng chọc nữa mà!', 'Chọc nữa tui phun lửa đó!', 'Hứ, giận rồi nha!'],
   idle: [
     'Cậu còn đó hông?',

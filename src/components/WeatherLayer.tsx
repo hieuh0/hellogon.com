@@ -250,7 +250,7 @@ export function WeatherLayer({ weather, reducedMotion, onCycle }: WeatherLayerPr
         </div>
       </div>
 
-      {/* Clouds sit above the sky but below Gon; clicking one changes the weather. */}
+      {/* Clouds sit above the sky but below Gôn; clicking one changes the weather. */}
       <div className={`pointer-events-none absolute inset-0 -z-[6] overflow-hidden ${show(!night)}`}>
         {CLOUDS.map((c, i) => (
           <button

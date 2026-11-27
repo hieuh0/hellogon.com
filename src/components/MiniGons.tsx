@@ -20,7 +20,7 @@ interface Bot {
   lookY: number
 }
 
-/** Six mini dino Gons that bounce around the viewport and flee from the cursor. */
+/** Six mini dino Gôns that bounce around the viewport and flee from the cursor. */
 export function MiniGons({ origin, reducedMotion }: { origin: { x: number; y: number }; reducedMotion: boolean }) {
   const bodyRefs = useRef<(HTMLDivElement | null)[]>([])
   const pupilRefs = useRef<(SVGGElement | null)[]>([])

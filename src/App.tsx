@@ -23,14 +23,14 @@ import { play, playChime, playNote, setSoundEnabled } from './lib/audioEngine'
 import { randomPastel } from './lib/pastel'
 import { computeHill, createWorld, gonSize } from './lib/world'
 
-const HOME_TITLE = 'Gon nè! 🦖'
+const HOME_TITLE = 'Gôn nè! 🦖'
 const AWAY_TITLE = 'Ơ, cậu đi đâu rồi? 👀'
 const MOOD_COLOR = { annoyed: '#FF9B8F', spicy: '#FF6B5E' }
 const IGNORED_KEYS = new Set(['Tab', 'Escape', 'Shift', 'Control', 'Alt', 'Meta', 'CapsLock'])
 /** Keyboard rows bottom-to-top, so higher rows play higher notes. */
 const LETTER_ORDER = 'zxcvbnmasdfghjklqwertyuiop'
 const ACCENT_FLASH_MS = 900
-/** Small Paw Coin bonuses for caring for Gon (with a cooldown so petting cannot be farmed). */
+/** Small Paw Coin bonuses for caring for Gôn (with a cooldown so petting cannot be farmed). */
 const PAT_BONUS = 1
 const PAT_BONUS_COOLDOWN_MS = 8000
 const FEED_BONUS = 2
@@ -46,7 +46,7 @@ const moodLabel: Record<Mood, string> = {
   dizzy: 'Chóng mặt 😵',
   spicy: 'Cay xè 🔥',
 }
-/** Gon's feet sit this far down his square wrapper (FLOOR_Y 66 in a -100..100 viewBox). */
+/** Gôn's feet sit this far down his square wrapper (FLOOR_Y 66 in a -100..100 viewBox). */
 const FEET = 0.83
 const BUBBLE_H = 80
 
@@ -119,7 +119,7 @@ export default function App() {
     }
   }, [markActive])
 
-  // Keyboard: Cmd/Ctrl+K or "/" opens the palette, letters play notes, any key makes Gon hop.
+  // Keyboard: Cmd/Ctrl+K or "/" opens the palette, letters play notes, any key makes Gôn hop.
   // While the runner is on, its own controls own the keyboard.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -181,7 +181,7 @@ export default function App() {
     return () => document.removeEventListener('visibilitychange', onVisibility)
   }, [emote, say, checkNight])
 
-  /* ----- Gon interactions ----- */
+  /* ----- Gôn interactions ----- */
 
   const handlePoke = useCallback(() => {
     const result = poke()
@@ -424,7 +424,7 @@ export default function App() {
             🐾 <span className="tabular-nums">{pet.coins}</span>
           </span>
           <span className="pill hidden md:inline-flex" aria-live="off">
-            Gon đang: <span className="text-[var(--fg)]">{moodLabel[mood]}</span>
+            Gôn đang: <span className="text-[var(--fg)]">{moodLabel[mood]}</span>
           </span>
         </div>
         <button
@@ -444,7 +444,7 @@ export default function App() {
         }`}
       >
         <h1 className="text-4xl font-black tracking-tight sm:text-6xl">
-          Xin chào, tui là <span className="title-gon">Gon</span>!
+          Xin chào, tui là <span className="title-gon">Gôn</span>!
         </h1>
         <p className="mt-2 max-w-lg text-[15px] font-bold text-[var(--muted)] sm:text-lg">
           Bé khủng long nhỏ giữ góc vườn chơi và mấy dự án lặt vặt.

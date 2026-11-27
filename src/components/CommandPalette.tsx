@@ -3,9 +3,9 @@ import { useEffect, useRef, useState, type KeyboardEvent } from 'react'
 export type CommandId = 'party' | 'zero-g' | 'clone' | 'reset'
 
 const COMMANDS: { id: CommandId; hint: string }[] = [
-  { id: 'party', hint: 'Disco: nền nhấp nháy, confetti, Gon nhảy liên tục' },
-  { id: 'zero-g', hint: 'Mất trọng lực: Gon trôi và dội tường như logo DVD' },
-  { id: 'clone', hint: 'Nhân bản 6 bé Gon mini chạy lung tung' },
+  { id: 'party', hint: 'Disco: nền nhấp nháy, confetti, Gôn nhảy liên tục' },
+  { id: 'zero-g', hint: 'Mất trọng lực: Gôn trôi và dội tường như logo DVD' },
+  { id: 'clone', hint: 'Nhân bản 6 bé Gôn mini chạy lung tung' },
   { id: 'reset', hint: 'Trả mọi thứ về như cũ' },
 ]
 

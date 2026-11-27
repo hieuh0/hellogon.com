@@ -10,7 +10,7 @@ const FLOWERS = [
   { u: 0.58, color: '#C9B6FF' },
 ]
 
-/** The pastel grassy hill Gon lives on. Its top arc is exactly the ground Gon and the ball walk on. */
+/** The pastel grassy hill Gôn lives on. Its top arc is exactly the ground Gôn and the ball walk on. */
 export function StageHill({ hill, width, height, hidden = false }: { hill: Hill; width: number; height: number; hidden?: boolean }) {
   const { cx, crestY, a, b } = hill
   const arc = (dy: number, shrink: number) =>

@@ -31,7 +31,7 @@ interface GachaModalProps {
   pull: () => PullResult | null
   equipSkin: (s: SkinId) => void
   equipAccessory: (a: Accessory | null) => void
-  /** A capsule finished opening (for sounds and Gon's reaction). */
+  /** A capsule finished opening (for sounds and Gôn's reaction). */
   onReveal: (r: PullResult) => void
   onBroke: () => void
 }
@@ -92,7 +92,7 @@ function GachaMachine({ stage, capsule }: { stage: Stage; capsule: string }) {
         </g>
         <rect x="120" y="220" width="40" height="28" rx="8" fill="#7A5A48" stroke={INK} strokeWidth="3" />
         <text x="100" y="176" textAnchor="middle" fontSize="15" fontWeight="900" fill={INK} fontFamily="Nunito, sans-serif">
-          GON GACHA
+          GÔN GACHA
         </text>
         <circle cx="48" cy="230" r="5" fill="#fff" opacity="0.8" />
         <circle cx="60" cy="242" r="3" fill="#fff" opacity="0.8" />
@@ -111,7 +111,7 @@ function GachaMachine({ stage, capsule }: { stage: Stage; capsule: string }) {
   )
 }
 
-/** "Gacha & Tủ đồ": spend Paw Coins on capsules, then mix and match what Gon has unlocked. */
+/** "Gacha & Tủ đồ": spend Paw Coins on capsules, then mix and match what Gôn has unlocked. */
 export function GachaModal(props: GachaModalProps) {
   const { open, onClose, reducedMotion, coins, skins, accessories, skin, accessory } = props
   const [tab, setTab] = useState<Tab>('gacha')
@@ -178,7 +178,7 @@ export function GachaModal(props: GachaModalProps) {
               Gacha &amp; Tủ đồ
             </h2>
             <p className="text-sm font-extrabold text-[var(--muted)]">
-              Ví của Gon: <span className="text-[var(--fg)]">{coins} 🐾</span>
+              Ví của Gôn: <span className="text-[var(--fg)]">{coins} 🐾</span>
             </p>
           </div>
           <button
@@ -225,7 +225,7 @@ export function GachaModal(props: GachaModalProps) {
                     <p className="mt-1 text-lg font-black">{prizeName(result.prize)}</p>
                     {result.duplicate ? (
                       <p className="text-sm font-bold text-[var(--muted)]">
-                        Trùng rồi nè! Gon hoàn lại {DUPLICATE_REFUND} 🐾 cho cậu nha.
+                        Trùng rồi nè! Gôn hoàn lại {DUPLICATE_REFUND} 🐾 cho cậu nha.
                       </p>
                     ) : (
                       <p className="text-sm font-bold text-[var(--muted)]">

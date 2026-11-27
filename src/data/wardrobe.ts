@@ -1,4 +1,4 @@
-/** Everything Gon can wear: skins (body colors) and accessories, plus the gacha odds. */
+/** Everything Gôn can wear: skins (body colors) and accessories, plus the gacha odds. */
 
 export type SkinId = 'mint' | 'strawberry' | 'butter' | 'taro' | 'sky' | 'rainbow'
 export type Accessory = 'bandaid' | 'chef' | 'nightcap' | 'duck' | 'shades' | 'catphones' | 'bow' | 'crown' | 'scarf'
@@ -47,8 +47,8 @@ export const ACCESSORIES: AccessoryInfo[] = [
   { id: 'bow', name: 'Nơ đỏ', emoji: '🎀', slot: 'head' },
   { id: 'crown', name: 'Vương miện nhỏ', emoji: '👑', slot: 'head' },
   { id: 'scarf', name: 'Khăn quàng cổ', emoji: '🧣', slot: 'neck' },
-  { id: 'bandaid', name: 'Băng cá nhân', emoji: '🩹', slot: 'face', hint: 'Chọc Gon 15 lần' },
-  { id: 'chef', name: 'Mũ đầu bếp', emoji: '🧑‍🍳', slot: 'head', hint: 'Cho Gon ăn 5 lần' },
+  { id: 'bandaid', name: 'Băng cá nhân', emoji: '🩹', slot: 'face', hint: 'Chọc Gôn 15 lần' },
+  { id: 'chef', name: 'Mũ đầu bếp', emoji: '🧑‍🍳', slot: 'head', hint: 'Cho Gôn ăn 5 lần' },
   { id: 'nightcap', name: 'Mũ ngủ', emoji: '🌙', slot: 'head', hint: 'Ghé thăm lúc nửa đêm' },
 ]
 

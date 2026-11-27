@@ -4,7 +4,7 @@ const INK = '#4A3728'
 const line = { stroke: INK, strokeWidth: 2.5, strokeLinejoin: 'round' as const, strokeLinecap: 'round' as const }
 
 /**
- * Head accessories, drawn with the origin on the crown of Gon's head, just in
+ * Head accessories, drawn with the origin on the crown of Gôn's head, just in
  * front of his dorsal spikes (negative y is up). The head's center sits at
  * (-10, 44) in these coordinates. GonMascot tilts this origin with the head's parallax.
  */

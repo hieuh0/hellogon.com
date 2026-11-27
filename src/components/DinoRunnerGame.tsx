@@ -6,7 +6,7 @@ const INK = '#4A3728'
 interface Obstacle {
   kind: 'cactus' | 'pebble' | 'bird' | 'cloud'
   x: number
-  /** Size and height of the bottom edge above the track, in Gon units. */
+  /** Size and height of the bottom edge above the track, in Gôn units. */
   w: number
   h: number
   lift: number
@@ -30,7 +30,7 @@ interface DinoRunnerGameProps {
   world: World
   best: number
   reducedMotion: boolean
-  /** Called once per run when Gon crashes; returns the coins added to the wallet and whether it is a record. */
+  /** Called once per run when Gôn crashes; returns the coins added to the wallet and whether it is a record. */
   onCrash: (score: number, collected: number) => { earned: number; record: boolean }
   onRestart: () => void
   onJump: () => void
@@ -41,7 +41,7 @@ interface DinoRunnerGameProps {
 const pad = (n: number) => String(Math.floor(n)).padStart(5, '0')
 
 /**
- * "Chạy đi Gon!": an endless runner on a scrolling pastel track. The real Gon is the
+ * "Chạy đi Gôn!": an endless runner on a scrolling pastel track. The real Gôn is the
  * runner; this component owns the jump physics (shared through world.game), the
  * obstacles, the Paw Coins, the score HUD and the game-over card.
  */
@@ -250,7 +250,7 @@ export function DinoRunnerGame({ world, best, reducedMotion, onCrash, onRestart,
       if (!speed) speed = 6.5 * u
       const inp = input.current
 
-      // Gon: jump (higher while the button is held), duck, fast-fall when ducking mid-air.
+      // Gôn: jump (higher while the button is held), duck, fast-fall when ducking mid-air.
       if (!over) {
         game.duck = inp.duck && game.y === 0
         if (inp.jumpQueued && game.y === 0 && !inp.duck) {
@@ -284,7 +284,7 @@ export function DinoRunnerGame({ world, best, reducedMotion, onCrash, onRestart,
         while (obstacles.length && obstacles[0].x < -200) obstacles.shift()
         while (coins.length && coins[0].x < -100) coins.shift()
 
-        // Gon's hitbox, a little forgiving: body only, feet to the top of the head.
+        // Gôn's hitbox, a little forgiving: body only, feet to the top of the head.
         const gx = world.gon.x
         const feet = ground - game.y
         const box = {
@@ -435,7 +435,7 @@ export function DinoRunnerGame({ world, best, reducedMotion, onCrash, onRestart,
 
   return (
     <>
-      {/* The track sits behind Gon; the controls and HUD sit above everything. */}
+      {/* The track sits behind Gôn; the controls and HUD sit above everything. */}
       <canvas
         ref={canvasRef}
         aria-hidden
@@ -494,7 +494,7 @@ export function DinoRunnerGame({ world, best, reducedMotion, onCrash, onRestart,
             <p className="text-3xl" aria-hidden>
               😵‍💫
             </p>
-            <h2 className="mt-1 text-2xl font-black">Ôi không, Gon vấp rồi!</h2>
+            <h2 className="mt-1 text-2xl font-black">Ôi không, Gôn vấp rồi!</h2>
             {crash.record && (
               <p className="mx-auto mt-2 w-fit rounded-full border-2 border-[#4A3728] bg-[#FFE08A] px-3 py-0.5 text-sm font-extrabold text-[#4A3728]">
                 🏆 Kỷ lục mới!

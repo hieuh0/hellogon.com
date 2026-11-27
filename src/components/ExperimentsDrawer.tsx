@@ -40,7 +40,7 @@ export function ExperimentsDrawer({ open, onClose }: { open: boolean; onClose: (
               🧪 {projects.length} trò đang vọc
             </p>
             <h2 id="experiments-title" className="mt-1 text-2xl font-black">
-              Phòng chơi của Gon
+              Phòng chơi của Gôn
             </h2>
             <p className="mt-1 text-sm font-semibold text-[var(--muted)]">Mấy món đồ chơi đang vọc. Có cái chạy được, có cái… chưa.</p>
           </div>

@@ -14,7 +14,7 @@ const RAPID_CLICK_WINDOW_MS = 1_800
 const ANNOYED_CLICKS = 5
 
 /**
- * Gon's mood, mouth and speech state. Temporary moods (happy, annoyed, dizzy, spicy)
+ * Gôn's mood, mouth and speech state. Temporary moods (happy, annoyed, dizzy, spicy)
  * override the base mood chosen by the caller (sleepy in dark mode, happy while partying).
  */
 export function useGonBrain(baseMood: Mood) {
@@ -73,7 +73,7 @@ export function useGonBrain(baseMood: Mood) {
     return () => window.clearTimeout(t)
   }, [say])
 
-  // After 15s without interaction, Gon yawns or drops a remark (then waits another 15s).
+  // After 15s without interaction, Gôn yawns or drops a remark (then waits another 15s).
   useEffect(() => {
     const iv = window.setInterval(() => {
       if (document.hidden || performance.now() - lastActive.current < IDLE_AFTER_MS) return
