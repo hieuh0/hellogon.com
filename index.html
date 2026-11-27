@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Gon nè! 🦖</title>
+    <meta name="description" content="Nhà của Gon — bé khủng long con thích được xoa đầu, ăn vặt và chơi bóng, giữa góc vườn chơi và mấy dự án lặt vặt." />
+    <meta name="theme-color" content="#FFF9F0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&subset=vietnamese&display=swap"
+    />
+    <script>
+      // Starry-night weather is the dark theme: apply it before first paint to avoid a flash.
+      ;(function () {
+        try {
+          var saved = localStorage.getItem('gon-weather')
+          var dark = saved ? saved === 'night' : matchMedia('(prefers-color-scheme: dark)').matches
+          if (dark) document.documentElement.classList.add('dark')
+        } catch (e) {}
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
